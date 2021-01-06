@@ -1,0 +1,23 @@
+package Adapter;
+
+
+public class RoundHole {
+
+    private double radius;
+
+    public RoundHole(double radius){
+        this.radius = radius;
+    }
+
+    public double getRadius(){
+
+        return radius;
+    }
+
+    public boolean fits(IRoundPeg peg) {
+        boolean result;
+        result = (this.getRadius() >= peg.getRadius());
+        return result;
+    }
+
+}
